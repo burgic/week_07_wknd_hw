@@ -2,13 +2,17 @@ import React from "react";
 
 const Article = ({article, onArticleClick}) => {
 
+    if(!article) {
+        return
+    }
+
     const handleClick = function (){
         onArticleClick(article)
     }
 
 
     return (
-    <li onClick={handleClick}>{article.response.results[0].webTitle}</li>    
+    <li onClick={handleClick}>{article.webTitle}</li>    
         
     )
     

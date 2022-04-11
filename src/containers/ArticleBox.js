@@ -14,8 +14,9 @@ const ArticleBox = () => {
     const getArticles = function() {
         fetch('https://content.guardianapis.com/search?format=json&api-key=test')
         .then(res => res.json())
-        .then(res => console.log(res))
-        .then(articles => setArticles(articles))
+        .then(articles => {
+            setArticles(articles.response.results)
+        })
         .catch(err => console.error);
     }
 

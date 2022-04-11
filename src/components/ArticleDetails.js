@@ -4,8 +4,8 @@ const ArticleDetails = ({article}) => {
     return (
         <div>
             <h2>Article</h2>
-            <h3>Title: {article.response.results[0].webTitle}</h3>
-            <p>Category{article.response.results[0].sectionName}</p>
+            <h3>Title: {article.webTitle}</h3>
+            <p>Category{article.sectionName}</p>
         </div>
     )
 }

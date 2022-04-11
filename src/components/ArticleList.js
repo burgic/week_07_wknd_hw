@@ -1,18 +1,18 @@
 import React from "react";
 import Article from "./Article";
 
-const ArticleList = ({articles, onArticleClick}) => {
-    if (!PaymentResponse.results) return 'no data';
-    const articleItem = articles.map((article, index) => {
-        return <Article article={article} key={index} onArticleClick={onArticleClick}/>
-        
+const ArticleList = ({articles}) => {
+    console.log(articles)
+    const articleItems = articles.map((article, index ) => {
+        return <Article index={index} article={article} />
     })
-
+    
     return (
-        <div>
-            {articleItem}
-        </div>
+    <div>
+        {articleItems}
+    </div>
     )
 }
+
 
 export default ArticleList;
